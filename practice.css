@@ -1,0 +1,508 @@
+/* =======================================
+   🌟 DEMO_FULL.CSS
+   Full style for demo_full.html
+   Keeps your original colors/layout
+   Adds square image + alternation rules.
+   ======================================= */
+
+/* =======================
+   RESET + BASE
+   ======================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: #07071a;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =======================
+   NAVBAR
+   ======================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(4, 6, 20, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.brand-text {
+  font-weight: 700;
+  font-size: 18px;
+  color: #f2f2f6;
+}
+
+.nav-links {
+  font-family:comicsans;
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #cfcfd6;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.login-btn a {
+  background: linear-gradient(180deg, #0a86c6, #065b8a);
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 6px 18px rgba(6, 91, 138, 0.18);
+}
+
+/* =======================
+   PAGE BASE
+   ======================= */
+.page {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 28px auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  padding: 0;
+  align-items: center;
+}
+
+.page .left {
+  width: 70%;
+  background: #0c0c2d;
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.page .right {
+  flex: 1;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.02), transparent), #0b0b1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* =======================
+   HEADINGS & TEXT
+   ======================= */
+.left h1 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.left h2 {
+  font-size: 22px;
+  color: #d6cff0;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.left h3 {
+  font-size: 18px;
+  color: #e8e1f9;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.left p {
+  font-size: 16px;
+  color: #cfcfe1;
+}
+
+.left .buttons {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* =======================
+   BUTTONS
+   ======================= */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-weight: 700;
+}
+
+.btn-filled {
+  background: linear-gradient(180deg, #0a86c6, #065b8a);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(6,91,138,0.18);
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #d3d3e8;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* =======================
+   LISTS
+   ======================= */
+.checklist {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: #d0cfe6;
+}
+
+.checklist li {
+  margin-bottom: 8px;
+}
+
+/* =======================
+   TIERS GRID
+   ======================= */
+.tiers-container {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+  padding: 60px;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.tier-box {
+  background: #7C5CFF;
+  border: 2px solid #8061FF;
+  border-radius: 10px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+}
+
+.tier-box h2 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.tier-box h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #0c0c2d;
+}
+
+/* =======================
+   SERVICES GRID
+   ======================= */
+.services-container {
+  max-width: 1100px;
+  width: 100%;
+  padding: 120px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.service-box {
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 35px;
+  background: #7B68EE;
+}
+
+/* =======================
+   AUTOMATION & INVESTMENT
+   ======================= */
+.automation {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0c2d;
+  color: white;
+  padding: 60px 80px;
+  gap: 50px;
+}
+
+.automation-left {
+  flex: 50%;
+}
+
+.automation-right {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-box {
+  background: #2C2C54;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 8px;
+}
+
+.investment-section {
+  display: flex;
+  height: 100vh;
+  background: #0a0f2c;
+  padding: 60px;
+}
+
+.investment-wrapper {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  padding: 60px;
+}
+
+.investment-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* =======================
+   FINTECH SECTION
+   ======================= */
+.page11 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0a0f2c;
+  padding: 80px 100px;
+  border-bottom: 15px solid white;
+  min-height: 100vh;
+  box-sizing: border-box;
+  gap: 50px;
+}
+
+.fintech-left {
+  flex: 1 1 60%;
+  color: #fff;
+}
+
+.fintech-box {
+  background: rgba(255,255,255,0.05);
+  border-left: 7px solid #7d5fff;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.fintech-right {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =======================
+   TESTIMONIAL
+   ======================= */
+.testimonial {
+  background: rgba(255,255,255,0.02);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #e9e6f8;
+}
+
+.testimonial .cite {
+  margin-top: 10px;
+  color: #cfcfe1;
+  font-weight: 700;
+}
+
+/* =======================
+   SECTION DIVIDER
+   ======================= */
+.section-divider {
+  border: none;
+  border-top: 3px solid white;
+  width: 100%;
+  margin: 0;
+}
+
+/* =======================
+   IMAGE STYLING
+   ======================= */
+.page .right img {
+  width: 420px;
+  max-width: 92%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* ======= SQUARE IMAGE DESIGN (Site-wide) ======= */
+.right img,
+.fintech-right img,
+.investment-right img,
+.automation-right img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Center image containers */
+.right,
+.fintech-right,
+.investment-right,
+.automation-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Alternate ordering helper classes */
+.page.right-image .left { order: 1; }
+.page.right-image .right { order: 2; }
+.page.left-image .right { order: 1; }
+.page.left-image .left { order: 2; }
+
+/* =======================
+   SMALLER PAGE TWEAKS
+   ======================= */
+.page21 .left h2,
+.page22 .left h3,
+.page24 .left h1,
+.page25 .tier-box h2 {
+  color: #d6cff0;
+}
+
+/* Testimonial accent */
+.page27 .testimonial {
+  margin-bottom: 12px;
+  padding: 18px;
+  border-left: 4px solid rgba(123,81,255,0.9);
+  background: rgba(255,255,255,0.02);
+}
+
+/* Contact options */
+.page32 .contact-opts p,
+.page22 .contact-opts p {
+  margin: 8px 0;
+  color: #d3d3e8;
+}
+
+/* =======================
+   RESPONSIVE BEHAVIOR
+   ======================= */
+@media (max-width: 1100px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .page .left {
+    width: 100%;
+    padding: 28px;
+  }
+
+  .page .right {
+    padding: 20px;
+  }
+
+  /* Hide nav links on narrow screens */
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .right img,
+  .fintech-right img,
+  .investment-right img,
+  .automation-right img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .page {
+    padding: 28px;
+  }
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+.footer-inner {
+  background: rgba(255,255,255,0.01);
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #a3c0ff;
+}
+
+.site-footer {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 14px 30px;
+  color: lightblue;
+  font-size: 13px;
+  text-align: center;
+}
